@@ -3,7 +3,8 @@
 
   <remote  name="github"
            fetch="https://github.com" />
-
+  <remote name="alliance"
+           fetch="https://github.com/AllianceOreo/" /> 
   <remote  name="gzosp"
            fetch="https://github.com/GZOSP" />
 
@@ -13,9 +14,9 @@
            sync-c="true"
            sync-j="8" />
 
-  <!-- GZOSP -->
-  <project path="manifest" name="manifest" remote="gzosp" />
-  <project path="build/make" name="build" remote="gzosp" >
+  <!-- ALLIANCE -->
+  <project path="manifest" name="manifest" remote="alliance" />
+  <project path="build/make" name="build" remote="alliance" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -24,12 +25,14 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="gzosp" />
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="gzosp" >
+   <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="alliance" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-
+  <project path="vendor/alliance" name="vendor_alliance" remote="alliance" />
+  
+  <!-- GZOSP -->
+  <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="gzosp" />
   <project path="bionic" name="bionic" groups="pdk" remote="gzosp" />
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
   <project path="development" name="development" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
@@ -97,6 +100,6 @@
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="gzosp" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="gzosp" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="gzosp" />
-  <project path="vendor/gzosp" name="vendor_gzosp" remote="gzosp" />
+
 
 </manifest>
