@@ -30,6 +30,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="device/alliance/sepolicy" name="android_device_alliance_sepolicy" remote="alliance" />
   <project path="device/lge/bullhead" name="android_device_lge_bullhead" groups="device,bullhead,pdk" remote="alliance" />
   <project path="frameworks/av" name="android_frameworks_av" groups="pdk" remote="alliance" />
   <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk" remote="alliance" />
@@ -39,7 +40,6 @@
   <project path="build/kati" name="build_kati" groups="pdk,tradefed" remote="gzosp" />
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="gzosp" />
   <project path="development" name="development" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
-  <project path="device/gzosp/sepolicy" name="device_gzosp_sepolicy" remote="gzosp" />
   <project path="external/chromium-webview" name="external_chromium-webview" groups="pdk" clone-depth="1" remote="gzosp" />
   <project path="external/connectivity" name="external_connectivity" groups="pdk" remote="gzosp" />
   <project path="external/ebtables" name="external_ebtables" groups="pdk" remote="gzosp" />
