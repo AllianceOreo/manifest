@@ -29,6 +29,7 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
+  <project path="device/lge/bullhead" name="android_device_lge_bullhead" groups="device,bullhead,pdk" remote="alliance" />
   <project path="vendor/alliance" name="android_vendor_alliance" remote="alliance" />
   
   <!-- GZOSP -->
